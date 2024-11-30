@@ -34,7 +34,7 @@ const CardPopularProducts = () => {
                         ${product.price}
                       </span>
                       <span className="mx-2">|</span>
-                        <Rating rating={3} />
+                        <Rating rating={product.rating || 0} />
                     </div>
                   </div>
                 </div>
@@ -44,7 +44,6 @@ const CardPopularProducts = () => {
                         <ShoppingBag className="w-4 h-4" />
                     </button>
                     {Math.round(product.stockQuantity / 100)}k Sold
-
                 </div>
               </div>
             ))}
